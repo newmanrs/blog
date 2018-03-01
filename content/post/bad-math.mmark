@@ -1,38 +1,16 @@
 ---
-title: "Bad Math"
+title: "Katex Test"
 date: 2018-01-04T14:26:24-08:00
 draft: false
 ---
 
 
-## Title 
+## Basic test
 
-### Hi.  This is the contents of the first post. 
-
+Someday I'll try to find the time to actually write some real content here.
 
 \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
 
-$$ x=3 $$ Where is this?  $ x = 3 $
+The good news is it seems to be functioning, so maybe I can get around to writing up a series on some fun, but likely useless mathematics.
 
-Will it even inline? $x=3$ ????
 
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
-Hi.  This is the contents of the first post.
