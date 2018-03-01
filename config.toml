@@ -62,7 +62,7 @@ canonifyurls = true
   identifier = "resume"
   name = "Resume"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-university\"></i>"
-  url = "/resume/resume.html"
+  url = "/resume/resume"
 
 [[menu.main]]
   weight = 5
