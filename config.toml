@@ -113,7 +113,7 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "(condescendingly as possible) We not a blog — we are a weblog"
 
   # Customization
   # Define the behavior of the sidebar
