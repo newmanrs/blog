@@ -7,9 +7,17 @@ draft: false
 
 ## Basic test
 
-Someday I'll try to find the time to actually write some real content here.
+Someday I'll try to find the time to actually write some real content here.  Mostly testing different blog features.
 
 \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
+
+```ruby
+require 'redcarpet'
+```
+
+```
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+```
 
 The good news is it seems to be functioning, so maybe I can get around to writing up a series on some fun, but likely useless mathematics.
 
