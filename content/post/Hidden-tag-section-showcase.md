@@ -1,5 +1,6 @@
 ---
 title: "Hidden tag section showcase"
+draft: true
 thumbnailImagePosition: left
 thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
 date: 2014-08-16

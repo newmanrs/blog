@@ -1,9 +1,9 @@
 baseURL = "http://richmondnewman.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "meh"
+title = "rsnewman"
 theme = "hugo-tranquilpeak-with-katex"
-disqusShortname = "disqusname?"
+# disqusShortname = "disqusname?"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
