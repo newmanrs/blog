@@ -5,8 +5,11 @@ draft: false
 tags:  ["npm", "resume", "json"]
 ---
 
-[Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume/) on this site.  This tool has a few quirks, but I am fairly enamored with the concept of separating raw data from the representation thereof.
-It's almost always a good idea to separate the two when time permits&mdash;this allows data transfer to new templates for rendering and layouts, and moreover moves towards the tantalizing dream^[Okay, I may be overhyping this, but I really don't like having to synchronize updates to multiple places.] of maintaining only one set of data that can be used for both a short-form resume and a long-form CV instead of maintaining two separate documents.
+[Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume/) on this site. I am a user&ndash;not author&ndash;of this software.  This tool has a few quirks, but I am fairly enamored with the concept of separating raw data from its representation, and with not having to manually format said representation.
+
+<!--more-->
+
+It is almost always a good idea to separate data and representations when time permits&mdash;this allows data transfer to new templates for rendering and layouts, and moreover moves towards the tantalizing dream^[Okay, I may be overhyping this, but I really don't like having to synchronize updates to multiple places.] of maintaining only one set of data that can be used for both a short-form resume and a long-form CV instead of maintaining two separate documents.
 
 # Basic Idea
 
