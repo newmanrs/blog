@@ -1,0 +1,24 @@
+---
+title: "Bad algorithms - Fibonacci sequence"
+date: 2018-03-23T12:13:50-07:00
+draft: true
+---
+
+Bounds and analysis of the run times of the poor implementations of the fibonacci sequence, in which apparently the runtime is bounded by the value of the sequence itself.
+
+
+<!--more-->
+
+```python
+def fib(n):
+    if n <= 1:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+```
+
+Informally, the fibonacci sequence is defined as the sum of the two preceding numbers, starting from 1 and 1.  That is, 1, 1, 3, 5, 8, 13, 21, and so forth.  Formally, this can be written as a difference equation:
+
+\\[ F(n) = F(n-1) + F(n-2), \\]
+
+where we have initial conditions $$F(0)=0,F(1)=1$$.  
