@@ -1,13 +1,101 @@
 ---
-title: "Bad algorithms - Fibonacci sequence"
+title: "Revisiting the fibonacci sequence"
 date: 2018-03-23T12:13:50-07:00
 draft: true
 ---
 
-Bounds and analysis of the run times of the poor implementations of the fibonacci sequence, in which apparently the runtime is bounded by the value of the sequence itself.
+While cleaning out my desk I found some notes on the Fibonacci sequence which I figured I might want to keep, or some other people might find interesting.  Informally, this sequence is defined as the sum of the two preceding numbers, starting from 1 (and 1).  That is, 1, 1, 3, 5, 8, 13, 21 and so forth.  Formally, this is a difference equation:
 
+\\[ F(n) = F(n-1) + F(n-2), \\]
+
+where we have initial conditions $$F(0)=0,F(1)=1$$.
 
 <!--more-->
+
+## Notation
+
+To prevent clutter when writing out analysis, I will be using the shorthand $$F_n = F(n)$$, and for the most part assume $$n$$ to be a positive integer. So to restate in this notation:
+
+$$F_n = F_{n-1} + F_{n-2}$$
+
+where we have initial conditions $$F_0=0,F_1=1$$.
+
+# Introduction
+
+Initially the pile of notes was inspired by some runtime-analysis of some bad code.  For the non-programmatically inclined it should be pretty obvious that computing $$F_5$$, requires $$F_4$$ and so forth, while doing some simple addition.  We will return to this later.
+
+## Rate of growth
+
+I suppose first let's just tackle this with some old fashioned math.  A retrospectively great initial question is to ask how fast does this sequence numbers of grow. That is, how does the ratio of successive terms $$\frac{F_{n}}{F_{n-1}}$$ behave?
+
+We need a point of attack, so lets consider dividing through our difference equation by $$F_{n-1}$$, to get some of these ratios of terms to appear and take the limit as n grows large.
+
+$$ \lim_{n\to\infty} \frac{F_{n}}{F_{n-1}} = \lim_{n\to\infty}1 +\frac{F_{n-2}}{F_{n-1}}$$
+
+Lets just boldy proceed assuming that the limit of $$\frac{F_n}{F_{n-1}}$$, and denote it $$l$$, then we have:
+
+$$ l = 1 + \frac{1}{l}$$
+
+$$ l^2 -l -1 = 0 $$
+
+which has two roots
+
+$$ l_+ = \tfrac{1 +\sqrt{5}}{2} = 1.618...$$
+
+$$ l_- = \tfrac{1 -\sqrt{5}}{2} = -0.618...$$
+
+The positive root of this is $$ l_+ $$ is the golden ratio usually denoted $$\phi$$. The decimals also being the same is no coincidence as it turns out that $$l_- = 1-l_+$$.
+Since we know that the $$F_n$$ is an increasing it follows that that $$l_+$$ governs the growth of the fibonacci sequence as its the only option for growth.
+
+$$ \lim_{n\to\infty} \frac{F_{n}}{F_{n-1}} = \frac{1 + \sqrt{5}}{2} $$
+
+So we see that the ratio may converge to these constants, implying that this function grows exponentially since the ratio of successive terms in the large limit appears to be a constant.  Pedants will note that since this function is discrete, its more fair to say it grows geometrically as it grows by a constant ratio.  They are probably correct, but the terminology seems less often used.  Many more people may find it strange that an integer-valued sequence can grow by a constant ratio that is an also an irrational number, which I suppose is a case for scribbling out math now and then!
+
+# Derivation of analytic solution
+
+With candidates for geometric roots, lets see if we can derive a formula using these.  An entirely reasonable guess for the functional form is to use the two roots above:
+
+$$F_n = A l_+^n + B l_-^n $$
+
+or
+
+$$ F_n = \frac{A (1+\sqrt{5})^n + B (1-\sqrt{5})^n}{2^n} $$
+
+We then attempt to match up the initial conditions. Using $$F_0 = 1 $$ gives
+
+$$ A + B = 1 \implies B = A-1 $$
+
+and using $$F_1 = 1 $$
+
+$$ F_1 = 1 \implies 1 = \frac{A (1+\sqrt{5}) + B (1-\sqrt{5})}{2} $$
+
+Substituting, etc. and solving for A, B is straightforward.
+
+$$ A = \frac{1+\sqrt{5}}{ 2\sqrt{5}} $$
+
+$$ B = 1 - A \implies B = 1 - \frac{1+\sqrt{5}}{ 2\sqrt{5}}$$
+
+Rearranging,
+
+$$ B = -\frac{1-\sqrt{5}}{2\sqrt{5}} $$
+
+And now we have an analytical formula for $$F_n$$, namely:
+
+$$ F_n = \frac{(1+\sqrt{5})^{n+1} + (1-\sqrt{5})^{n+1}}{2^{n+1}\sqrt{5}} $$
+
+At first glance I would say this fails a sanity check since it seems highly unlikely that for a given value of $$n$$ that this would yield an integer.  But, it turns out, the numerator annihilates all terms that do not contain the sqrt(5) when you expand them.
+
+## Useless aside
+
+One might ask when
+
+$$ G_n = \frac{(1+a)^{n} + (1-a)^{n}}{2^{n} a} $$
+
+gives integer values for all values of n, and it appears to be when $a$ is odd, or the square root of $a=2m+1$.  Proof is left to someone else.
+
+# So why were these notes on my desk?
+
+For those curious, the actual reason these notes on the Fibonacci sequence were on my desk in the first place is I was analyzing the runtime of the awful implementation of the fibonacci sequence that calls itself recursively (constructing what is apparently, the Fibonacci tree).  Computer scientists will tell you the answer is obviously exponential in runtime, and decline to give the exact bounds since they remember it as fact, and if I recall concern themselves generally only with finding least upper bounds of functions (see big O notation and analysis).
 
 ```python
 def fib(n):
@@ -17,8 +105,24 @@ def fib(n):
         return fib(n-1)+fib(n-2)
 ```
 
-Informally, the fibonacci sequence is defined as the sum of the two preceding numbers, starting from 1 and 1.  That is, 1, 1, 3, 5, 8, 13, 21, and so forth.  Formally, this can be written as a difference equation:
+This is a terrible implementation, since to call `fib(10)` we invoke calls to `fib(9)` and `fib(8)`, each of which fork, and so forth.  Computer scientists call this the fibonacci tree!
 
-\\[ F(n) = F(n-1) + F(n-2), \\]
+What arose however, is that on further sketching, the number of function calls to `fib(n)` turns out to be $$2F_n-1$$ as determined by counting.
 
-where we have initial conditions $$F(0)=0,F(1)=1$$.  
+It turns out this comes from an extremely related sequence to the Fibonacci, namely:
+
+$$ g_n = g_{n-1}+g_{n-2} + 1 $$
+
+More screwing around gives that if you have the difference equation
+
+$$ h_n = h_{n-1}+h_{n-2} + c $$
+
+the solution with this constant c is then
+
+$$ h_n = (c+1)F_n-c $$
+
+This curiously seems to hold for all $$ c \in \mathbb{R} $$.  This might be the only novel part of the post, although I'm sure some mathematicians have previously solved for this more rigorously since it's the simplest possible inhomogeneous linear difference equation.  Although at this point, I don't know that many people who actually would solve such a thing rigorously.
+
+## Paul Hankin's ridiculous generating function
+
+http://paulhankin.github.io/Fibonacci/
