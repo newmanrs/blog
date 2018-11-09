@@ -84,5 +84,7 @@ To use these we can just build and feed in dictionaries using python's periodica
 and the resulting class behaves like a dictionary except that you cannot remove required keys.
 
 I've found this to give myself a reasonable bit of safety, for not too much effort.  I think having named dictionary types with a set of keys (shown here) is nice, but mandating both keys, and the type of the keys is pretty easy to add as well.
+
 This simple pattern seems to do a good job of balancing the desire for adding type safety to a project after doing the initial prototyping without having to do significant rewrites.
-It's quite the safety guarantee of say, Haskell sumtypes, but it does the job and can be retrofitted easily to solidfy common dictionary-heavy python programs.
+
+But perhaps trying to validate in python is foolish.  It sure is a lot of initial boilerplate to do so.  
