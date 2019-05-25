@@ -1,0 +1,2 @@
+
+The symlink in this repo is broken, and my laptop needs a blog_themes directory to decouple the project from my other desktop's install.

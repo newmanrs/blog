@@ -4,6 +4,8 @@ import numpy as np
 
 class Timer:
 
+    """ Timer built for with/close blocks """
+
     def __init__(self,name=None,verbose=True):
         self.name = name
         self.verbose = verbose
@@ -105,7 +107,7 @@ def iter_next_largest_permutation(value):
 
 if __name__ == "__main__":
 
-    start = 123454321 
+    start = 1234543210
 
     """ our codepath """
     with Timer("Our iterator") as t:

@@ -1,7 +1,7 @@
 ---
 title: "Python Safety"
 date: 2018-03-07T16:39:32-08:00
-draft: False
+draft: True
 ---
 
 Warning: Post requires some knowledge of programming with python.  Skip otherwise.
