@@ -102,6 +102,8 @@ $$ \mathcal{F}(n) = \frac{(1+\sqrt{5})^{n+1} - (1-\sqrt{5})^{n+1}}{2^{n+1}\sqrt{
 
 At first glance I would say this fails a sanity check since it seems highly unlikely that for a given value of $$n$$ that this would yield an integer.  However, it turns out upon expansion the symmetry of the numerator eliminates all even powers of $$\sqrt{5}$$, and all remaining coefficients are divisible by $$2^{n+1}$$.
 
+TO SELF:  Is that obvious? I don't remember this expansion, and if so, it was confiscated and discarded by Ada Mohedano after I left the SCCA.  To future self: Do not leave notes on desk when resigning positions.
+
 ## Mildy interesting aside
 
 One might ask what values of $$a$$ in the related, but more generic function,
@@ -160,13 +162,14 @@ This curiously appears to hold for both positive and negative real numbers $$c$$
 
 ### Another terrible way
 
-Paul Hankin discusses an interesting (but thoroughly impractical) method using bitwise operators and provides the implementation reprinted here:
+Paul Hankin discusses an interesting (but thoroughly impractical) method using bitwise operators and provides the implementation reprinted here:  
 
 ```python
 def fib(n):
     return (4 << n*(3+n)) // ((4 << 2*n) - (2 << n) - 1) & ((2 << n) - 1)
 ```
 
+Unlike the common analytical form derived above, at least this is plausibly integer valued.
 http://paulhankin.github.io/Fibonacci/
 
 ### A useful way
