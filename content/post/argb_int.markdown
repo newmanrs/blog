@@ -1,7 +1,7 @@
 ---
 title: "Converting argb to int"
 date: 2020-01-07T16:39:32-08:00
-draft: False
+draft: True
 ---
 
 Apparently a lot of my old computer simulations inconsistently store RGB color either as separate values or as a single integer.  I figure I might as well write a post so I don't continue to forget how to do the conversions.
