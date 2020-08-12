@@ -5,11 +5,11 @@ draft: false
 tags:  ["npm", "resume", "json"]
 ---
 
-[Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume/) on this site. I am a user&ndash;not author&ndash;of this software.  This tool has a few quirks, but I am fairly enamored with the concept of separating raw data from its representation, and with not having to manually format said representation.
+[Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume/) on this site. I am a user&ndash;not author&ndash;of this software.  This tool has a few quirks, but I appreciate concept of separating raw data from its representation whenever possible, and with not having to manually format said representation.
 
 <!--more-->
 
-It is almost always a good idea to separate data and representations when time permits&mdash;this allows data transfer to new templates for rendering and layouts, and moreover moves towards the tantalizing dream^[Okay, I may be overhyping this, but I really don't like having to synchronize updates to multiple places.] of maintaining only one set of data that can be used for both a short-form resume and a long-form CV instead of maintaining two separate documents.
+I suppose it is generally a good to separate data and representations when time permits&mdash;this allows data transfer to new templates for different rendering and layouts, and moreover moves towards the tantalizing dream^[Okay, I may be overhyping this, but I really don't like having to synchronize updates to multiple places.] of maintaining only one set of data that can be used for both a short-form resume and a long-form CV instead of maintaining two separate documents.  Of course, I still have not done so.
 
 # Basic Idea
 
@@ -27,7 +27,7 @@ What jsonresume does is store the contents of a resume by section into an json f
 }
 ```
 
-Nonprogrammers may find the brackets in json excessive, but it's the price paid to banish ambiguity.^[Generally, computers do what you say, not what you want.] The entire file I used to generate my resume is [available here](/json/resume.json).  This information is ingested into jsonresume into some templates which select which data to use and outputs the resume as a [HTML page](/resume/resume/).  The [quickstart guide](https://jsonresume.org/getting-started/) to use this software project is simple.
+Nonprogrammers may find the brackets in json obnoxious, but it's the price paid to banish most ambiguity.^[Generally, computers do what you say, not what you want.] I probably don't want to know how many hours humanity has spent unmangling CSV files. The file I used to generate my resume is [available here](/json/resume.json).  This information is ingested into jsonresume into some templates which select which data to use and outputs the resume as a [HTML page](/resume/resume/).  The [quickstart guide](https://jsonresume.org/getting-started/) to use this software project is simple.
 Briefly, you'll need some kind of unix-like shell which is now available even in Windows. And assuming if the `resume.json` is in the same directory (and that you've installed the node package manager (npm), the basic evocation to install is as follows:
 
 ```
@@ -49,14 +49,13 @@ As of the date of this post (and since I first used the tool over a year ago) di
 # The Minor
 
 Jsonresume comes with several source templates that are obtained from npm.
-These templates, however, can not be run from local (unless this has been changed since last use).  The consequence of this is that you have to fork the repository (create your own copy descendant from) to make even minor edits.  This does does cause a bit of an extra barrier to making changes formatting.^[ I suppose on the other hand being unable to modify templates locally also forces me (and anyone else making changes) to make their work publicly available for other people's use.] It's not hard, but if you hadn't used npm before it makes for another side task and set of steps to learn.
-This also means that internet connectivity is required to render HTML.
+These templates, however, can not be run from local (unless this has been changed since last use).  The consequence of this is that you have to fork the repository (create your own copy descendant from) to make even minor edits.  This does does cause a bit of an extra barrier to making changes formatting.^[ I suppose on the other hand being unable to modify templates locally also forces me (and anyone else making changes) to make their work publicly available for other people's use.] It's not hard, but if you hadn't used npm before it makes for another side task and set of steps to learn.  That said, having to commit changes without testing them is obnoxious.  Fortunately, the templates provided aren't too bad, if I recall I believe I only had to change some spaces to non-breaking spaces.
 
 # Last opinions
 
-I feel this tool is more than good enough to generate HTML resumes that look good with minimal effort.  Editing json files by hand without accidently creating invalid files is the hardest step.  I do hope someone finds the time to contribute fixes to direct PDF rendering, although you can always work around this.  The project webpage also seems to be creating a web-based editor that can mitigate this and make adoptation even faster.
+I feel this tool is more than good enough to generate HTML resumes that look good with minimal effort.  Editing json files by hand without accidently creating invalid files is the hardest step.  I do hope someone finds the time to contribute fixes to direct PDF rendering, although you can always work around this.  The project webpage also seems to be creating a web-based editor that can mitigate this and make adoptation easier.
 
-Moreover, I think this separation of information from its representation a fantastic idea.  Even if this isn't the project that survives for resumes, the templates only need to be written once and can be disseminated so anyone can benefit from another person's significant design efforts.
+Even if this isn't the project that survives for constructing resumes from templates, conceptually these templates only need to be written once and can be disseminated so anyone can benefit from others significant design efforts.
 Has anyone really ever enjoyed peforming iterations of formatting and layout of resumes manually?
 I am glad I can use someone else's layout and design to save myself the time and effort.
 And honestly&mdash;they probably have better aesthetic tastes than I do.

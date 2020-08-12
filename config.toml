@@ -31,7 +31,7 @@ canonifyurls = true
 [author]
   name = "Richmond Newman"
   bio = "Data Scientist"
-  job = "Data Scientist at Seattle Cancer Care Alliance"
+  job = ""
   location = "Seattle, WA, US"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "thibaud.lepretre@gmail.com"
@@ -74,7 +74,7 @@ canonifyurls = true
   identifier = "resume"
   name = "Resume"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-university\"></i>"
-  url = "/resume/resume"
+  url = "/resume/resume.html"
 
 [[menu.main]]
   weight = 5

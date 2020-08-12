@@ -5,7 +5,7 @@
         "picture": "",
         "email": "newmanrs@umich.edu",
         "phone": "(253) 326-3329",
-        "summary": "Richmond has earned degrees from the University of Washington and Michigan.  As a graduate student at the University of Michigan he wrote software to analyze statistical mechanical simulations of nanoparticles in order to study the thermodynamics of self-assembly. His interests are generally broader than this specific work, and he is enthusiastic about applying science and numerical data analysis to solve real-world problems.  At the present he is analyzing data at the Seattle Cancer Care Alliance supporting efforts to develop clinical pathways.",
+        "summary": "Richmond has earned degrees from the University of Washington and Michigan.  As a graduate student at the University of Michigan he wrote software to analyze statistical mechanical simulations of nanoparticles in order to study the nucleation rates in systems of self-assembling nanopolyhedra. His interests in science are generally broader than this specific work, and he is enthusiastic about applying scientific and numerical analysis methods to solve real-world problems.",
         "location": {
             "address": "9608 126th St. E",
             "postalCode": "WA 98373",
@@ -13,11 +13,13 @@
             "countryCode": "US",
             "region": "Washington"
         },
-        "profiles": [{
-            "network": "Facebook",
+        "profiles": [
+        {
+            "network": "LinkedIn",
             "username": "newmanrs",
-            "url": "https://www.facebook.com/newmanrs"
-        }]
+            "url": "https://www.linkedin.com/in/newmanrs/"
+        }
+        ]
     },
     "work": [
         {
@@ -25,7 +27,7 @@
         "position": "Data Scientist",
         "website": "http://www.seattlecca.org",
         "startDate": "2016-10-15",
-        "summary": "Assisted in constructing and implementing a data model to allow for analytical evaluation of clinical treatment pathways.",
+        "summary": "Designed and built software to evaluate clinical treatment pathways and determine whether provided patient care was consistent with internal standards.",
         "highlights": 
             [
             "Implemented a graph database in Neo4j to model clinical pathways and associated data"
@@ -76,20 +78,22 @@
         "gpa": "3.67"
     }],
     "publications": [{
-        "name": "Shape Controls Crystallization Pathways in Fluids of ccp-forming Hard Polyhedra",
+        "name": "Shape-controlled Crystallisation Pathways in Dense Fluids of ccp-forming Hard Polyhedra",
         "authors": "Richmond S. Newman, Samanthule Nola, Julia Dschemuchadse, Sharon C. Glotzer",
-        "publisher": "In preparation for Physical Review Letters",
-        "summary": "Performed free energy calculations to characterize how faceting affects the stability of hard polyhedral nuclei and can promote crystallization."
+        "publisher": "Molecular Physics",
+        "summary": "Computed Gibbs free energy as a function of cluster size in a family of related polyhedra to better understand how polyhedral faceting and emergent directional entropic forces promote or hinder crystal nucleation.",
+        "releaseDate": "2019"
     }, {
         "name": "Shape-Dependent Ordering of Gold Nanocrystals into Large-Scale Superlattices",
         "authors": "Jianxiao Gong, Richmond S. Newman, Michael Engel, Sharon C. Glotzer, Zhiyong Tang",
-        "publisher": "In review, Nature Communications",
-        "summary": "Contributed simulations and understanding of the homogeneous and heterogeneous nucleation describing our collaborators system of gold nanopolyhedra, and helped understand the presence of defects and polymorphic crystal structures appear."
+        "publisher": "Nature Communications",
+        "summary": "Contributed simulations of the self-assembly of gold nanopolyhedra into large-scale superlattices to better understand the homogeneous and heterogenous nucleation behavior observed in the experiments and factors required to create large single crystalline domains.",
+        "releaseDate": "2017"
     }, {
         "name": "Size- and Shape-Controlled Synthesis of Doped LiYF4 Upconversion Nanophosphors and their Shape-Directed Self-Assembly",
         "authors": "Xingchen Ye, Joshua E. Collins, Richmond S. Newman, Michael Engel, Jun Chen, Guozhong Xing, Cherie R. Kagan, Sharon C. Glotzer, and Christopher B. Murray",
-        "publisher": "In preparation, JACS",
-        "summary": "Provided Monte Carlo simulations of bipyramidal nanoparticles and discovered that two mechanisms, either slight edge truncation or particle attractions stabilize the novel striped phase."
+        "publisher": "In preparation",
+        "summary": "Provided Monte Carlo simulations of bipyramidal nanoparticles discovering that two separate mechanisms, either slight edge truncation or particle attractions, can stabilize the novel striped phase."
     }, {
         "name": "Role of isostatisticity and load-bearing microstructure in the elasticity of yielded colloidal gels.",
         "authors": "Lilian C. Hsiao, Richmond S. Newman, Sharon C. Glotzer, Michael J. Solomon",
@@ -112,17 +116,17 @@
     "skills": [{
         "name": "Software & HPC",
         "keywords": [
-            "C++",
             "Python",
-            "Java",
-            "MPI"
+            "C++",
+            "Neo4j",
+            "SQL"
         ]
     }],
     "interests": [{
         "name": "Bicycling",
         "keywords": [
-            "Univega Vivo Sport 1982",
-            "Fuji Absolute 2.0 2012"
+            "Univega Gran Premio 1984",
+            "Merlin Road 1991"
         ]
     }]
 }
