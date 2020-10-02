@@ -5,7 +5,7 @@ draft: false
 tags:  ["npm", "resume", "json"]
 ---
 
-[Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume/) on this site. I am a user&ndash;not author&ndash;of this software.  This tool has a few quirks, but I appreciate concept of separating raw data from its representation whenever possible, and with not having to manually format said representation.
+[Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume.html) on this site. I am a user&ndash;not author&ndash;of this software.  This tool has a few quirks, but I appreciate concept of separating raw data from its representation whenever possible, and with not having to manually format said representation.
 
 <!--more-->
 
