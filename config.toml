@@ -4,7 +4,7 @@ baseurl                 = "http://richmondnewman.com/"
 DefaultContentLanguage  = "en"
 title                   = "RichmondNewman.com"
 theme                   = "hugo-future-imperfect-slim"
-paginate                = 10
+paginate                = 5
 disqusShortname         = ""
 googleAnalytics         = ""
 pluralizeListTitles     = false
@@ -62,8 +62,8 @@ disableLanguages        = []
 
   [params.sidebar]
     about               = "This theme was developed for Hugo static site generator."
-    postAmount          = 5
-    categories          = true
+    postAmount          = 6
+    categories          = false
     categoriesByCount   = true
 
   [params.footer]
