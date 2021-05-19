@@ -40,7 +40,7 @@ disableLanguages        = []
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "Future Imperfect"
+    navbarTitle         = "Homepage"
     dynamicTitles       = true
     searchMenu          = true
     shareMenu           = true
@@ -48,7 +48,7 @@ disableLanguages        = []
 
   [params.intro]
     header                = "Richmond Newman"
-    paragraph             = "Personal blog and online home of my resume."
+    paragraph             = "Personal blog and resume holder"
     rssIntro              = true
     socialIntro           = true
     hideWhenSingleColumn  = false
@@ -58,10 +58,10 @@ disableLanguages        = []
       src                 = "img/main/logo.jpg"
       shape               = "circle"
       width               = ""
-      alt                 = "perfect"
+      alt                 = "polyhedron"
 
   [params.sidebar]
-    about               = "This theme was developed for Hugo static site generator."
+    about               = false
     postAmount          = 6
     categories          = false
     categoriesByCount   = true
@@ -120,12 +120,12 @@ disableLanguages        = []
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 5
 
-  [[menu.main]]
-    name              = "Contact"
-    identifier        = "contact"
-    url               = "contact"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
+  #[[menu.main]]
+  #  name              = "Contact"
+  #  identifier        = "contact"
+  #  url               = "contact"
+  #  pre               = "<i class='far fa-envelope'></i>"
+  #  weight            = 6
 
 [Languages]
 
