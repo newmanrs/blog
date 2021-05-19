@@ -67,7 +67,7 @@ disableLanguages        = []
     categoriesByCount   = true
 
   [params.footer]
-    rssFooter           = false
+    rssFooter           = true
     socialFooter        = false
 
   [params.utterances]
