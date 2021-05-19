@@ -2,7 +2,7 @@
 # https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
 baseurl                 = "http://richmondnewman.com/"
 DefaultContentLanguage  = "en"
-title                   = "RichmondNewman.com"
+title                   = "newmanrs"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 5
 disqusShortname         = ""
@@ -40,7 +40,7 @@ disableLanguages        = []
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "Homepage"
+    navbarTitle         = "Home"
     dynamicTitles       = true
     searchMenu          = true
     shareMenu           = true
@@ -67,8 +67,8 @@ disableLanguages        = []
     categoriesByCount   = true
 
   [params.footer]
-    rssFooter           = true
-    socialFooter        = true
+    rssFooter           = false
+    socialFooter        = false
 
   [params.utterances]
     enabled             = false
@@ -79,7 +79,7 @@ disableLanguages        = []
     theme               = "github-light"
 
   [params.staticman]
-    enabled             = true
+    enabled             = false
     api                 = ""  # No Trailing Slash
     gitProvider         = ""
     username            = ""
