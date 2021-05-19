@@ -1,8 +1,8 @@
----
-title: "Katex, Tables, Codeblock testing"
-date: 2018-01-04T14:26:24-08:00
-draft: false
----
++++
+title = "Katex, Tables, Codeblock testing"
+date = 2018-01-04T14:26:24-08:00
+categories = ["Katex", "Syntax Highlighting"]
++++
 
 Someday I'll try to find the time to actually write some real content here.  Mostly testing different blog features here.
 

@@ -178,7 +178,7 @@ disableLanguages        = []
   #vine                  = ""
   googlescholar         = ""
   #orcid                 = ""
-  #researchgate          = "https://www.researchgate.net/scientific-contributions/Richmond-S-Newman-2036863496"
+  researchgate          = "https://www.researchgate.net/scientific-contributions/Richmond-S-Newman-2036863496"
   #keybase               = "example"
   #mastodon              = "example.com/@example"
   # Email
