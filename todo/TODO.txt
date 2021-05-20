@@ -1,3 +1,5 @@
+TODO: Consider writing script that fixes the front matter, or can couple/decouple the front matter at will
+
 TODO: Quaternion article with a basic how-to example to use on vectors, and maybe to show the basic methods of building rotation matrices.
 
 

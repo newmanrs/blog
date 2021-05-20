@@ -1,11 +1,11 @@
----
-title: "Recipe - Coconut Berry Clafoutis"
-date: 2018-03-06T13:25:04-08:00
-draft: false
-tags: ["recipe", "dessert","cooking","coconut milk","clafoutis","berry","trivial"]
-thumbnailImagePosition: "left"
-thumbnailImage: /img/recipe_clafoutis_thumb.jpg
----
++++
+title = "Coconut Berry Clafoutis"
+date = 2018-03-06T13:25:04-08:00
+categories = ["recipe", "dessert","cooking","coconut milk","clafoutis","berry"]
+[[images]]
+ src = "/img/recipe_clafoutis_thumb.jpg"
+ alt = "Clafoutis"
++++
 
 Behold the coconut-milk-based clafoutis.  This dessert requires a few minutes of whisking and roughly half an hour of baking.
 

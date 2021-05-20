@@ -2,7 +2,7 @@
 title: "Jsonresume: Templated Resumes"
 date: 2018-03-05T12:42:06-08:00
 draft: false
-tags:  ["npm", "resume", "json"]
+categories:  ["npm", "resume", "json"]
 ---
 
 [Jsonresume](https://jsonresume.org/schema) is the tool I used to generate the [resume](/resume/resume.html) on this site. I am a user&ndash;not author&ndash;of this software.  This tool has a few quirks, but I appreciate concept of separating raw data from its representation whenever possible, and with not having to manually format said representation.
