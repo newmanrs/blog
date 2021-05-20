@@ -5,8 +5,7 @@ categories = ["Katex", "Syntax Highlighting"]
 +++
 
 Someday I'll try to find the time to actually write some real content here.  Mostly testing different blog features here.
-
-\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 It works!
 
