@@ -1,5 +1,5 @@
 +++
-title = "Merlin Pressfit Bottom Bracket"
+title = "Merlin Pressfit Bottom Bracket Manual"
 date = 2020-12-15
 draft = false
 categories = ["bikes", "Merlin", "manuals"]
