@@ -20,7 +20,7 @@ The initial what-if trial was successful, and I decided it would be better with 
 
 ### Buzzkill
 
-It was pointed out shortly after by my then-roommate Royan D'Mello that this dessert already exists:  the French call it a [clafoutis](https://www.epicurious.com/recipes/food/views/basic-clafoutis-51208430), and apparently it's properly made with cherries.  So okay, substitute coconut milk for actual dairy.  So much for novelty and/or culinary innovation.^[This roommate also pointed out that one of my quick breakfasts of poaching eggs over tomatoes (with some cumin, coriander, garlic, onions) is shakshouka, a common middle eastern dish.  I thought I was taking a shortcut for cleanup since the eggs can't stick to the pan if they don't touch it.]
+It was pointed out shortly after by my then-roommate Royan D'Mello that this dessert already exists:  the French call it a [clafoutis](https://www.epicurious.com/recipes/food/views/basic-clafoutis-51208430), and apparently it's properly made with cherries.  So okay, substitute coconut milk for actual dairy.  So much for novelty and/or culinary innovation.
 
 # Ingredients
 
@@ -37,8 +37,7 @@ It was pointed out shortly after by my then-roommate Royan D'Mello that this des
 
 # Directions
 
-1.  Mix coconut milk, sugar, and eggs and vanilla (optional).  Add flour slowly last.  Fortunately, it's a liquid so no tools or effort is required.  I usually prefer chaokoh coconut milk, but there are rare consistency issues so maybe I shouldn't recommend.  Unfortunately this is a "I know it when I see it"^[Usually it manifests with not the water/fat separating, but the fat itself separating into pieces.  It usually has only a subtle off flavor, but I'm certain cans like this might be fine for a curry but would be disastrous for this dish. As a further aside the selected quote was popularized by [Justice Potter Stewart in the case Jacobellis vs Ohio](https://www.law.cornell.edu/supremecourt/text/378/184#writing-USSC_CR_0378_0184_ZC1) in a first amendment case over what is and is not obscene material.
-] type of situation.
+1.  Mix coconut milk, sugar, and eggs and vanilla (optional).  Add flour slowly last.  Fortunately, it's a liquid so no tools or effort is required.  I usually prefer chaokoh coconut milk, but there are rare consistency issues so maybe I shouldn't recommend.  Unfortunately this is a "I know it when I see it"
 2.  Butter up a baking pan.
 3.  Add mixture.  Cover with layer of fruit.  Frozen works fine.  Chef's choice, but mixed berries are shown, and work well.  I have a hunch that halved cherries, or sliced stone fruits would be delicious.  Consider trace nutmeg.
 4.  Bake at 350&deg;F until it sets and/or golden.  It will puff up.  When it cools it deflates.  Don't worry about it.  It'll be okay.

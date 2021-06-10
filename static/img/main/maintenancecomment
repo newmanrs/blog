@@ -1,0 +1,1 @@
+The blog theme requires the image to be static/main/logo.jpg, although the path is asked for in the config.toml for the main site.  Other names/files fail to work, I should probably debug and submit pull request but I am lazy.
