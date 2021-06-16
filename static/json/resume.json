@@ -1,137 +1,135 @@
 {
-    "basics": {
-        "name": "Richmond S. Newman",
-        "label": "Data Scientist",
-        "picture": "",
-        "email": "newmanrs@umich.edu",
-        "phone": "(253) 326-3329",
-        "summary": "Richmond has earned degrees from the University of Washington and Michigan.  As a graduate student at the University of Michigan he wrote software to analyze statistical mechanical simulations of nanoparticles in order to study the nucleation rates in systems of self-assembling nanopolyhedra. His interests in science are generally broader than this specific work, and he is enthusiastic about applying scientific and numerical analysis methods to solve real-world problems.",
-        "location": {
-            "address": "9608 126th St. E",
-            "postalCode": "WA 98373",
-            "city": "Puyallup",
-            "countryCode": "US",
-            "region": "Washington"
-        },
-        "profiles": [
-        {
-            "network": "LinkedIn",
-            "username": "newmanrs",
-            "url": "https://www.linkedin.com/in/newmanrs/"
-        },
-        {
-            "network": "GitHub",
-            "username": "newmanrs",
-            "url": "https://github.com/newmanrs"
-        }
-        ]
-    },
-    "work": [
-        {
-        "company": "Seattle Cancer Care Alliance",
-        "position": "Data Scientist",
-        "website": "http://www.seattlecca.org",
-        "startDate": "2016-10-15",
-        "summary": "Designed and built software to evaluate clinical treatment pathways and determine whether provided patient care was consistent with internal standards.",
-        "highlights": 
-            [
-            "Implemented a graph database in Neo4j to model clinical pathways and associated data"
-            ]
-        },
-        {
-        "company": "University of Michigan",
-        "position": "Graduate Student Research Assistant",
-        "website": "http://glotzerlab.engin.umich.edu/home",
-        "startDate": "2009-09-01",
-        "endDate": "2016-07-31",
-        "summary": "Performed research in the field of computational statistical mechanics by simulating the self-assembly of polyhedral nanoparticles.",
-        "highlights": 
-            [
-            "Implemented crystal identification techniques based on spherical harmonics for the group",
-            "Conducted free energy calculations of nucleation energy barriers in hard polyhedra",
-            "Supervised research projects of other students leading to further publications"
-            ]
-        }
-    ],
-    "education": [{
-        "institution": "University of Michigan",
-        "area": "Chemical Engineering",
-        "studyType": "Doctor of Philosophy",
-        "startDate": "2009-09-01",
-        "endDate": "2016-07-31",
-        "gpa": "4.0"
-    }, {
-        "institution": "University of Washington",
-        "area": "Chemical Engineering",
-        "studyType": "Bachelor of Science",
-        "startDate": "2005-09-01",
-        "endDate": "2009-06-30",
-        "gpa": "3.67"
-    }, {
-        "institution": "University of Washington",
-        "area": "Applied Computational & Mathematical Sciences",
-        "studyType": "Bachelor of Science",
-        "startDate": "2005-09-01",
-        "endDate": "2009-06-30",
-        "gpa": "3.67"
-    }, {
-        "institution": "University of Washington",
-        "area": "Biochemistry",
-        "studyType": "Bachelor of Science",
-        "startDate": "2005-09-01",
-        "endDate": "2009-06-30",
-        "gpa": "3.67"
-    }],
-    "publications": [{
-        "name": "Shape-controlled Crystallisation Pathways in Dense Fluids of ccp-forming Hard Polyhedra",
-        "authors": "Richmond S. Newman, Samanthule Nola, Julia Dschemuchadse, Sharon C. Glotzer",
-        "publisher": "Molecular Physics",
-        "summary": "Computed Gibbs free energy as a function of cluster size in a family of related polyhedra to better understand how polyhedral faceting and emergent directional entropic forces promote or hinder crystal nucleation.",
-        "releaseDate": "2019"
-    }, {
-        "name": "Shape-Dependent Ordering of Gold Nanocrystals into Large-Scale Superlattices",
-        "authors": "Jianxiao Gong, Richmond S. Newman, Michael Engel, Sharon C. Glotzer, Zhiyong Tang",
-        "publisher": "Nature Communications",
-        "summary": "Contributed simulations of the self-assembly of gold nanopolyhedra into large-scale superlattices to better understand the homogeneous and heterogenous nucleation behavior observed in the experiments and factors required to create large single crystalline domains.",
-        "releaseDate": "2017"
-    }, {
-        "name": "Size- and Shape-Controlled Synthesis of Doped LiYF4 Upconversion Nanophosphors and their Shape-Directed Self-Assembly",
-        "authors": "Xingchen Ye, Joshua E. Collins, Richmond S. Newman, Michael Engel, Jun Chen, Guozhong Xing, Cherie R. Kagan, Sharon C. Glotzer, and Christopher B. Murray",
-        "publisher": "In preparation",
-        "summary": "Provided Monte Carlo simulations of bipyramidal nanoparticles discovering that two separate mechanisms, either slight edge truncation or particle attractions, can stabilize the novel striped phase."
-    }, {
-        "name": "Role of isostatisticity and load-bearing microstructure in the elasticity of yielded colloidal gels.",
-        "authors": "Lilian C. Hsiao, Richmond S. Newman, Sharon C. Glotzer, Michael J. Solomon",
-        "publisher": "Proceedings of the National Academy of Sciences",
-        "releaseDate": "2012",
-        "summary": "Performed molecular dynamics simulations to quantify the role of rigid clusters on gel fluid rheology."
-    }, {
-        "name": "Shape-driven solid-solid transitions in colloids.",
-        "authors": "Chrisy Xiyu Du, Greg van Anders, Richmond S. Newman, and Sharon C. Glotzer",
-        "publisher" : "Proceedings of the National Academy of Sciences",
-        "releaseDate" : "2017",
-        "summary": "Contributed software tools and supervised simulations studying colloidal solid-solid phase transitions as a function of polyhedral geometry."
-    }, {
-        "name": "Self-assembly of a Space-tessellating Structure in the Binary System of Hard Tetrahedra and Octahedra",
-        "authors": "Andrew T. Cadotte, Julia Dschemuchadse, Pablo F. Damasceno, Richmond S. Newman, and Sharon C. Glotzer",
-        "publisher" : "Soft Matter",
-        "releaseDate": "2016",
-        "summary": "Assisted primary author in performing the Monte Carlo simulations, interpreting data, and in automatically detecting observed crystalline phases."
-    }],
-    "skills": [{
-        "name": "Software & HPC",
-        "keywords": [
-            "Python",
-            "C++",
-            "Neo4j",
-            "SQL"
-        ]
-    }],
-    "interests": [{
-        "name": "Bicycling",
-        "keywords": [
-            "Univega Gran Premio 1984",
-            "Merlin Road 1991"
-        ]
-    }]
+	"basics": {
+		"name": "Richmond S. Newman",
+		"label": "Data Scientist",
+		"picture": "",
+		"email": "newmanrs@umich.edu",
+		"phone": "(253) 326-3329",
+		"summary": "Richmond has earned degrees from the University of Washington and Michigan.  As a graduate student at the University of Michigan he wrote software to analyze statistical mechanical simulations of nanoparticles in order to study the nucleation rates in systems of self-assembling nanopolyhedra. His interests in science are generally broader than this specific work, and he is enthusiastic about applying scientific and numerical analysis methods to solve real-world problems.",
+		"location": {
+			"address": "9608 126th St. E",
+			"postalCode": "WA 98373",
+			"city": "Puyallup",
+			"countryCode": "US",
+			"region": "Washington"
+		},
+		"profiles": [{
+				"network": "LinkedIn",
+				"username": "newmanrs",
+				"url": "https://www.linkedin.com/in/newmanrs/"
+			},
+			{
+				"network": "GitHub",
+				"username": "newmanrs",
+				"url": "https://github.com/newmanrs"
+			}
+		]
+	},
+	"work": [{
+			"company": "Consultant",
+			"position": "Data Scientist",
+			"startDate": "2018-08-01",
+	  		"website": "http://richmondnewman.com",
+			"summary": "Various data consulting work for clients",
+			"highlights": [
+				"Parsed sensor data to compute heart rate from ECG sensors embedded in compression shorts at Strive Tech"
+			]
+		},
+		{
+			"company": "Seattle Cancer Care Alliance",
+			"position": "Data Scientist",
+			"website": "http://www.seattlecca.org",
+			"startDate": "2016-10-15",
+			"endDate": "2018-06-15",
+			"summary": "Designed and built software to evaluate clinical treatment pathways and determine whether provided patient care was consistent with internal standards.",
+			"highlights": [
+				"Implemented a graph database in Neo4j to model clinical pathways and associated data"
+			]
+		},
+		{
+			"company": "University of Michigan",
+			"position": "Graduate Student Research Assistant",
+			"website": "http://glotzerlab.engin.umich.edu/home",
+			"startDate": "2009-09-01",
+			"endDate": "2016-07-31",
+			"summary": "Performed research in the field of computational statistical mechanics by simulating the self-assembly of polyhedral nanoparticles.",
+			"highlights": [
+				"Implemented crystal identification techniques based on spherical harmonics for the group",
+				"Conducted free energy calculations of nucleation energy barriers in hard polyhedra"
+			]
+		}
+	],
+	"education": [{
+		"institution": "University of Michigan",
+		"area": "Chemical Engineering",
+		"studyType": "Doctor of Philosophy",
+		"startDate": "2009-09-01",
+		"endDate": "2016-07-31",
+		"gpa": "4.0"
+	}, {
+		"institution": "University of Washington",
+		"area": "Chemical Engineering",
+		"studyType": "Bachelor of Science",
+		"startDate": "2005-09-01",
+		"endDate": "2009-06-30",
+		"gpa": "3.67"
+	}, {
+		"institution": "University of Washington",
+		"area": "Applied Computational & Mathematical Sciences",
+		"studyType": "Bachelor of Science",
+		"startDate": "2005-09-01",
+		"endDate": "2009-06-30",
+		"gpa": "3.67"
+	}, {
+		"institution": "University of Washington",
+		"area": "Biochemistry",
+		"studyType": "Bachelor of Science",
+		"startDate": "2005-09-01",
+		"endDate": "2009-06-30",
+		"gpa": "3.67"
+	}],
+	"publications": [{
+		"name": "Shape-controlled Crystallisation Pathways in Dense Fluids of ccp-forming Hard Polyhedra",
+		"authors": "Richmond S. Newman, Samanthule Nola, Julia Dschemuchadse, Sharon C. Glotzer",
+		"publisher": "Molecular Physics",
+		"summary": "Computed Gibbs free energy as a function of cluster size in a family of related polyhedra to better understand how polyhedral faceting and emergent directional entropic forces promote or hinder crystal nucleation.",
+		"releaseDate": "2019"
+	}, {
+		"name": "Shape-Dependent Ordering of Gold Nanocrystals into Large-Scale Superlattices",
+		"authors": "Jianxiao Gong, Richmond S. Newman, Michael Engel, Sharon C. Glotzer, Zhiyong Tang",
+		"publisher": "Nature Communications",
+		"summary": "Contributed simulations of the self-assembly of gold nanopolyhedra into large-scale superlattices to better understand the homogeneous and heterogenous nucleation behavior observed in the experiments and factors required to create large single crystalline domains.",
+		"releaseDate": "2017"
+	}, {
+		"name": "Size- and Shape-Controlled Synthesis of Doped LiYF4 Upconversion Nanophosphors and their Shape-Directed Self-Assembly",
+		"authors": "Xingchen Ye, Joshua E. Collins, Richmond S. Newman, Michael Engel, Jun Chen, Guozhong Xing, Cherie R. Kagan, Sharon C. Glotzer, and Christopher B. Murray",
+		"publisher": "In preparation",
+		"summary": "Provided Monte Carlo simulations of bipyramidal nanoparticles discovering that two separate mechanisms, either slight edge truncation or particle attractions, can stabilize the novel striped phase."
+	}, {
+		"name": "Role of isostatisticity and load-bearing microstructure in the elasticity of yielded colloidal gels.",
+		"authors": "Lilian C. Hsiao, Richmond S. Newman, Sharon C. Glotzer, Michael J. Solomon",
+		"publisher": "Proceedings of the National Academy of Sciences",
+		"releaseDate": "2012",
+		"summary": "Performed molecular dynamics simulations to quantify the role of rigid clusters on gel fluid rheology."
+	}, {
+		"name": "Shape-driven solid-solid transitions in colloids.",
+		"authors": "Chrisy Xiyu Du, Greg van Anders, Richmond S. Newman, and Sharon C. Glotzer",
+		"publisher": "Proceedings of the National Academy of Sciences",
+		"releaseDate": "2017",
+		"summary": "Contributed software tools and supervised simulations studying colloidal solid-solid phase transitions as a function of polyhedral geometry."
+	}, {
+		"name": "Self-assembly of a Space-tessellating Structure in the Binary System of Hard Tetrahedra and Octahedra",
+		"authors": "Andrew T. Cadotte, Julia Dschemuchadse, Pablo F. Damasceno, Richmond S. Newman, and Sharon C. Glotzer",
+		"publisher": "Soft Matter",
+		"releaseDate": "2016",
+		"summary": "Assisted primary author in performing the Monte Carlo simulations, interpreting data, and in automatically detecting observed crystalline phases."
+	}],
+	"skills": [{
+		"name": "Software & HPC",
+		"keywords": [
+			"Python",
+			"C++",
+			"Neo4j"
+		]
+	}]
 }
