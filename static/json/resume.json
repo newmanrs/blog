@@ -32,7 +32,7 @@
 	  		"website": "http://richmondnewman.com",
 			"summary": "Various data consulting work for clients",
 			"highlights": [
-				"Parsed sensor data to compute heart rate from ECG sensors embedded in compression shorts at Strive Tech"
+				"Built a method to compute heart rate from ECG sensors embedded in compression shorts at Strive Tech"
 			]
 		},
 		{
