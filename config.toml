@@ -63,7 +63,7 @@ disableLanguages        = []
   [params.sidebar]
     about               = false
     postAmount          = 6
-    categories          = false
+    categories          = true
     categoriesByCount   = true
 
   [params.footer]
