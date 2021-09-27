@@ -12,15 +12,17 @@
     }
 
     div.gallery a img {
-        height: 200px;
+        height: 150px;
         object-fit: scale-down;
         flex-grow: 1;
     }
 </style>
 
 <div class="gallery">
-    {{ $path := print "content/" .Page.File.Dir (.Get "src") }}
-    {{ $url  := print .Page.Permalink (.Get "src") }}
+
+    {{ $foldername := (.Get "folder" | default "imgs") }}
+    {{ $path := print "content/" .Page.File.Dir $foldername }}
+    {{ $url  := print .Page.Permalink $foldername }}
     {{ range (readDir $path)  }}
         {{ $src := print $url "/" .Name }}
         <a data-fancybox="gallery" href="{{ $src }}">
