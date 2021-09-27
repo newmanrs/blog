@@ -22,22 +22,22 @@ Hello
 ![Stuff](azacca.png "Stuff")
 
 
+
+[Hello](https://linktosomewhere)
+
 # Test image galleries
 
 Gallery!
 
-200px
+default pix height
 {{< foldergallery folder="imgs">}}
 
-100px
+100px height
 {{< foldergallery folder="imgs" height="100px" >}}
 
 50px
 {{< foldergallery folder="imgs" height="50px" >}}
 
-Hello trying with different height
-
-{{< foldergallery >}}
 
 
-{{< foldergallery folder="gallery2" height="50px">}}
+{{< foldergallery folder="gallery2" height="250px">}}
