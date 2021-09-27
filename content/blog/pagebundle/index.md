@@ -1,5 +1,5 @@
 +++
-title = "PAGE BUNDLE TEST"
+title = "PAGE BUNDLE GALLERY TEST"
 date = 2021-09-26
 draft = true
 categories = ["pagebundle"]
@@ -26,6 +26,18 @@ Hello
 
 Gallery!
 
-{{< foldergallery src="imgs" >}}
+200px
+{{< foldergallery folder="imgs">}}
+
+100px
+{{< foldergallery folder="imgs" height="100px" >}}
+
+50px
+{{< foldergallery folder="imgs" height="50px" >}}
+
+Hello trying with different height
+
+{{< foldergallery >}}
 
 
+{{< foldergallery folder="gallery2" height="50px">}}
