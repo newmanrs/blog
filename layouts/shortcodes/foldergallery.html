@@ -1,0 +1,31 @@
+
+<style>
+    div.gallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div.gallery a {
+        flex-grow: 1;
+        object-fit: scale-down;
+        margin: 2px;
+        display: flex;
+    }
+
+    div.gallery a img {            
+        height: 200px;
+        object-fit: scale-down;
+        flex-grow: 1;
+    }
+</style>
+
+<div class="gallery">
+    {{ $path := print "content/" .Page.Dir (.Get "src") }}
+    {{ $url  := print .Page.URL (.Get "src") }}
+    {{ range (readDir $path)  }}            
+        {{ $src := print $url "/" .Name }}                
+        <a data-fancybox="gallery" href="{{ $src }}">
+            <img src="{{ $src }}">  <br/>            
+        </a>
+    {{ end }}
+</div>
+
