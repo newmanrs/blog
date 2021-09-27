@@ -27,14 +27,14 @@ $body-font: "Source Sans Pro", Helvetica, sans-serif;
 $code-font: "Courier New", monospace;
 $fa-free-font: "Font Awesome 5 Free";
 $fa-brands-font: "Font Awesome 5 Brands";
-$header-color: 	hsl(0, 1%, 23%);
+$header-color: 	hsl(0, 1%, 15%);
 $accent-color: 	hsl(175, 60%, 45%);
 $accent-hover: hsla(175, 60%, 45%, 0.25);
 $warning-color: hsl(332, 60%, 45%);
 $warning-hover: hsla(332, 60%, 45%, 0.25);
 $utility-gray: hsl(0, 0%, 67%);
-$utility-gray-2: 	hsl(210, 13%, 50%);
-$utility-white: hsl(0, 0%, 96%);
+    $utility-gray-2: 	hsl(210, 13%, 50%);
+$utility-white: hsl(37, 25%, 90%);
 
 /* Background & Border */
 
@@ -617,7 +617,7 @@ figcaption {
 
 .post {
   background:	$white;
-  margin: 1.5em auto;
+  margin: 0.5cm auto;
   padding: 1em;
   max-width: 55em;
   > header {
@@ -1254,7 +1254,7 @@ figcaption {
     border: 0;
   }
   p {
-    opacity: 0.6;
+    opacity: 0.8;
   }
   header {
     h1 {
