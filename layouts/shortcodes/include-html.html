@@ -1,0 +1,3 @@
+{{ $filename := .Get 0 }}
+{{ $file := print "content/" .Page.File.Dir $filename }}
+{{ $file | readFile | safeHTML }}
