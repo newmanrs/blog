@@ -1,9 +1,10 @@
 +++
 title = "Voronoi Image Compression"
-date = 2021-09-27
+date = 2021-12-05
 draft = true
 categories = ["pagebundle"]
 removeBlur = false
+plotly = true
 
 [[images]]
  src = "/blog/voronoi-image-compression/featured.png"
@@ -15,39 +16,16 @@ Goofing around with voronoi tesselations of images inspired by this [code golf q
 
 <!--more-->
 
-# Introduction to Voronoi diagrams
+## Introduction to Voronoi diagrams
 
 Voronoi cells are the region of space closest to a given point in a set of points.
 
 
-Mathematically, a voronoi cell $C_i$ around a point $p_i with distance function $d$ is defined as
+Mathematically, a voronoi cell $C_i$ around a point $p_i$ with distance function $d$ is defined as
 
 $$ C_i = { x \in R^2 | d(x,p_i) < d(x,p_k) \forall i \neq j} $$
 
-
-# Hello
-
-Hello
-
-![Stuff](azacca.png "Stuff")
+Attempt to make a plot
 
 
-
-[Hello](https://linktosomewhere)
-
-# Test image galleries
-
-Gallery!
-
-default pix height
-{{< foldergallery folder="imgs">}}
-
-100px height
-{{< foldergallery folder="imgs" height="100px" >}}
-
-50px
-{{< foldergallery folder="imgs" height="50px" >}}
-
-
-
-{{< foldergallery folder="gallery2" height="250px">}}
+        {{< plotly json="/blog/voronoi-image-compression/scatterplot.json" height="200px" >}}

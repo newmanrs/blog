@@ -1,4 +1,9 @@
 {{ define "main" }}
+
+{{ if .Params.plotly }}
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{{ end }}
+
   <article>
     <div class="post">
       {{ .Render "header" }}
