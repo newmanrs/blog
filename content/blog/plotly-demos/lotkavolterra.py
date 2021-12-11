@@ -13,19 +13,18 @@ beta = 4/3
 gamma = 1
 delta = 1
 t0 = 0
-z0 = [[1.0, 0.6], [1.0,0.8], [1.0, 1.0],[1.0,0.51]]
+z0 = [[1.0, 0.6], [1.0,0.8], [1.0, 1.0],[1.0,0.52]]
 Ntraj = len(z0)
 
-
-# Integrator steps
-Npts = 481   # If you see +1, it's so the slider includes endpoint
-dt = '0.05'  # Use string not float for exact decimal fmt strings later on
 
 # Stride the integrator arrays to reduce
 # number of plot points by this factor to
 # decouple plot lagginess from ODE integrator
 # accuracy (tied to dt)
 stride = 2
+# Integrator steps
+Npts = 600 +stride+1  # +stride+1 makes endpoint inclusive
+dt = '0.04'  # Use string not float for exact decimal fmt strings later on
 
 # plot params
 carr = ["#54278f",
