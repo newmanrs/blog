@@ -28,9 +28,7 @@ stride = 10
 
 # plot params
 #color arrays
-c1 = "#54278f"
-c2 = "#807dba"
-carr = [c1,
+carr = ["#54278f",
         "#33a02c",
         "#54cbd1",
         "#1f78b4",
@@ -87,6 +85,7 @@ y = np.zeros((Npts,Ntraj))
 for i in range(Ntraj):
     r = ode(vanderpol).set_integrator('dopri5',  method='bdf')
     r.set_initial_value(z0[i],t0)
+    # r.set_f_params(mu)  # mu is already set to 1 in func
     odeints.append(r)
 
     x[0][i] = z0[i][0]

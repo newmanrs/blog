@@ -13,17 +13,31 @@ beta = 4/3
 gamma = 1
 delta = 1
 t0 = 0
-z0 = [1.0, 1.0]
+z0 = [[1.0, 0.6], [1.0,0.8], [1.0, 1.0],[1.0,0.51]]
+Ntraj = len(z0)
 
 
 # Integrator steps
 Npts = 481   # If you see +1, it's so the slider includes endpoint
 dt = '0.05'  # Use string not float for exact decimal fmt strings later on
 
+# Stride the integrator arrays to reduce
+# number of plot points by this factor to
+# decouple plot lagginess from ODE integrator
+# accuracy (tied to dt)
+stride = 2
 
 # plot params
-c1 = "#54278f"
-c2 = "#807dba"
+carr = ["#54278f",
+        "#33a02c",
+        "#54cbd1",
+        "#1f78b4",
+        "#ee7f22",
+        "#c90000",
+        "#9c1c93",
+        "#fb9a99",
+        ]
+
 xmin = 0
 xmax = 2
 ymin = 0
@@ -41,7 +55,7 @@ tfmt = f".{tdecs}f"  #Make format based on decimals of dt
 xfmt = ".3f"
 yfmt = ".3f"
 frame_duration = 16
-marker_size = 20
+marker_size = 12
 
 def lotkavolterra(t, z, alpha, beta, gamma, delta):
     """
@@ -55,77 +69,139 @@ def lotkavolterra(t, z, alpha, beta, gamma, delta):
     return dzdt
 
 # Config scipy ODE
-r = ode(lotkavolterra).set_integrator('zvode', method='bdf')
-r.set_initial_value(z0,t0).set_f_params(alpha,beta,gamma,delta)
+odeints = []
 
+#Allocate data arrays
 t = np.zeros(Npts)
-x = np.zeros(Npts)
-y = np.zeros(Npts)
-x[0] = z0[0]
-y[0] = z0[1]
+x = np.zeros((Npts,Ntraj))
+y = np.zeros((Npts,Ntraj))
+
+# ODE integrators, method selected by 'does not concurrent error'.
+# For a quick plot probably don't need rigorous testing of accuracy
+# anyways.
+for i in range(Ntraj):
+    r = ode(lotkavolterra).set_integrator('dopri5',  method='bdf')
+    r.set_f_params(alpha,beta,gamma,delta)
+    r.set_initial_value(z0[i],t0)
+    odeints.append(r)
+
+    x[0][i] = z0[i][0]
+    y[0][i] = z0[i][1]
 
 # Integrate
 dt = float(dt)
 for i in range(Npts-1):
     t[i+1] = r.t + dt
-    # You'd think the integator would need
-    # to know exact dt, but apparently not.
-    z_i= r.integrate(r.t+dt)  #integrating dz/dx
-    # Cast to real and pack into x,y vectors for plotting
-    x[i+1] = np.real(z_i[0])
-    y[i+1] = np.real(z_i[1])
 
-def datapoint_text(idx : int, t, x, y):  # t,x,y arrays to index into
-    return f"Time t={t[idx]:{tfmt}}, X(t)={x[idx]:{xfmt}}, Y(t)={y[idx]:{yfmt}}"
+    for j in range(Ntraj):
+        z_i= odeints[j].integrate(r.t+dt)  # integrating dz/dx
+        # Cast to real and pack into x,y vectors for plotting
+        x[i+1][j] = np.real(z_i[0])
+        y[i+1][j] = np.real(z_i[1])
 
+
+# Stride data to speed up the final plot
+t = t[0::stride]
+x = x[0::stride,:]
+y = y[0::stride,:]
+Npts = Npts//stride
+dt = dt*stride
+
+
+def datapoint_text(row : int, col : int, t, x, y):
+    """
+    Mousever helper function for the scatterplot individual points.
+    """
+    ti = t[row]
+    xi = x[row][col]
+    yi = y[row][col]
+    return f"Time t={ti:{tfmt}}, x(t)={xi:{xfmt}}, y(t)={yi:{yfmt}}"
+
+# Begin core of the plot function in older build-a-dict blindly and
+# yolo at once API.  Example plotly animations got ugly to change here
+# when they start populating lists of nested dictionaries 5 levels deep
+# containing list comprehensions.
 fig_dict = {
-    "data":[
-        go.Scatter(
-            x=[x[0]],
-            y=[y[0]],
-            mode="markers",
-            marker=dict(size=marker_size, color=c1),
-            name = "t",
-            hoverinfo = 'text',
-            text = [datapoint_text(0,t,x,y)],
-                ),
-        go.Scatter(
-            x=x,
-            y=y,
-            mode="lines",
-            line=dict(width=2, color=c2),
-            name = 'limit cycle',
-            hoverinfo = 'text',
-            text = [f"X(t)={i:{xfmt}}, Y(t)={j:{yfmt}}" for (i,j) in zip(x,y)]
-            )],
-    "layout":go.Layout(
+    "data":[],
+    "layout": go.Layout(
         xaxis=dict(range=[xmin, xmax], autorange=False, zeroline=True),
         yaxis=dict(range=[ymin, ymax], autorange=False, zeroline=True),
         xaxis_title='x(t)',
         yaxis_title='y(t)',
-        #title="Lotka-Volterra Predator-Prey Model",
+        #title="PlotTitle",
         hovermode="closest",
         updatemenus=[]  # Button controls added here later
         ),
-    "frames":
-        [ # Begin list comprehension of frames for animation
-            go.Frame(
-                data=[
-                    go.Scatter(
-                        x=[x[k]], #List of one point
-                        y=[y[k]],
-                        hoverinfo = 'text',
-                        text = [datapoint_text(k,t,x,y)], # Set mouseover
-                        mode="markers",
-                        marker=dict(color=c1, size=marker_size)
-                    )
-                    ],
-                name = f'{k}' # Must match slider frame name
-                )
+    "frames": [], # Plot frames added here later.
+   }
 
-        for k in range(Npts)
-        ] # End list comprehension of frames
-}
+def make_frame_figure_data(tidx):
+
+    data = []
+    for col in range(Ntraj):
+        # Plot the initial conditions as a marker
+        # at the current tidx point
+        p = go.Scatter(
+            name=f"Trajectory {col}",
+            x=[x[tidx][col]],
+            y=[y[tidx][col]],
+            mode="markers",
+            marker=dict(size=marker_size, color=carr[col]),
+            hoverinfo='text',
+            text=[datapoint_text(0,col,t,x,y)],
+            )
+        data.append(p)
+
+        # Update the trajectory only on tidx = 0
+        #  i.e. these parts are fixed and need not be redrawn
+        if tidx == 0:
+            # Trajectory plots
+            p = go.Scatter(
+                x=x[:,col],
+                y=y[:,col],
+                mode="lines",
+                line=dict(width=2, color=carr[col]),
+                name=f'x<sub>0</sub>={z0[col][0]}, y<sub>0</sub>={z0[col][1]}',
+                hoverinfo='text',
+                # Text needs to be list for each point too
+                text=[f"x(t={t:{tfmt}})={i:{xfmt}}, y(t={t:{tfmt}})={j:{yfmt}}"
+                    for (i,j,t) in zip(x[:,col],y[:,col],t)]
+                )
+            data.append(p)
+            # Fixed ghost of initial scatterpoint
+            p = go.Scatter(
+                name=f"fixed_small_inital_cond {col}",
+                x=[x[tidx][col]],
+                y=[y[tidx][col]],
+                mode="markers",
+                marker=dict(size=int(marker_size*2/3), color=carr[col]),
+                hoverinfo='text',
+                text=[datapoint_text(0,col,t,x,y)],
+                showlegend=False
+                )
+            data.append(p)
+
+        else:
+            # not t=0, pass no-op object that gives no updates
+            # merge logic is probably __dict__.update(**kwargs)
+            p = go.Scatter()
+            data.append(p)
+            data.append(p)
+    return data
+
+
+fig_dict['data']=make_frame_figure_data(tidx=0)
+
+#fig_dict["frames"] needs list above plots to update
+frames = []
+frame_names = [f'frame_{k}' for k in range(Npts)]
+for k in range(Npts):
+    data = make_frame_figure_data(tidx=k)
+    # Frame_names are used to sync with sliders by the
+    # backend so this must match at tag:FRAME_SLIDER_NAMES
+    frames.append(go.Frame(data=data, name = frame_names[k]))
+
+fig_dict['frames'] = frames
 
 # Button control for start/stop and animation speed
 fig_dict["layout"]["updatemenus"] = [
@@ -164,21 +240,6 @@ fig_dict["layout"]["updatemenus"] = [
                     "mode": "immediate"
                 }],
             },
-            # Reset Button
-           # {
-           # "label": "Reset",
-           # "method": "animate",
-           # "args": [
-           #     None,
-           #     {"frame":
-           #         {
-           #         "duration": 0,
-           #         "redraw": False
-           #         },
-           #         "mode": "immediate",
-           #     "fromcurrent": False
-           #     }],
-           # }
         ],
     "direction": "left",
     "pad": {"r": 0, "t": 0},
@@ -213,7 +274,7 @@ sliders_dict = {
 
 for i in range(0,Npts):
     slider_step = {"args": [
-        [f'{i}'], # Match figure text exactly for slider to sync
+        [frame_names[i]], # Match frame text exactly  tag:FRAME_SLIDER_NAMES
         {"frame": {"duration": 50, "redraw": False},
          "mode": "immediate",
          "transition": {"duration": 50}}
@@ -229,15 +290,15 @@ fig_dict["layout"]["sliders"] = [sliders_dict]
 
 fig = go.Figure(fig_dict)
 
-# lol why were examples not built in this api
-# instead of dictionary madness?
+# lol why were examples I read not built in this api
+# instead of awkwardly documented giant dictionaries
 fig.update_layout(
     # Move legend into graph
     legend=dict(
         yanchor="top",
         y=0.99,
         xanchor="right",
-        x=0.99
+        x=1.33
         ),
     # Move title to LHS, and lower
     title=dict(
@@ -261,3 +322,4 @@ fig.write_html(
     include_mathjax=inc_mathjax,
     include_plotlyjs=inc_plotlyjs)
 print(f"Done writing html file {outputfile}")
+
