@@ -33,9 +33,7 @@ $$ \frac{dy}{dt} = \delta xy - \gamma y ,$$
 where $\alpha, \beta, \delta, \gamma > 0$.
 The chart that follows is of the Lotka-Volterra system with $\alpha = 2/3$, $\beta=4/3$, $\gamma=1$, $\beta=1$, and integrated numerically from $t=0$ to $t=20$ with step size $\Delta t=0.04$, with a few different initial conditions.  Small dots represent the initial position at $t=0$, and large dots $x(t)$, $y(t)$.  The trajectory over time is shown as lines in the same color.
 
-<pre>
 {{< include-html "lotkavolterra.html" >}}
-</pre>
 
 We see here from integrating these equations gives a boom-bust cycle in the populations of predator and prey.  I'll leave you to guess or what initial point with these conditions is an equilibrium point.
 
