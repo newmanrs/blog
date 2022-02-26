@@ -151,7 +151,7 @@ disableLanguages        = []
   #wordpress             = ""
   #medium                = ""
   # Professional/Business Oriented Communities
-  linkedin              = "https://www.linkedin.com/in/newmanrs"
+  linkedin              = "newmanrs"
   #linkedin_company      = "examplebusiness"
   #foursquare            = ""
   #xing                  = ""
@@ -170,7 +170,7 @@ disableLanguages        = []
   instagram             = "newmanrs"
   #tumblr                = ""
   #twitter               = "example"
-  strava                = "https://www.strava.com/athletes/16965390"
+  strava                = "16965390"
   #skype                 = ""
   #snapchat              = ""
   #pinterest             = "example"
@@ -178,7 +178,7 @@ disableLanguages        = []
   #vine                  = ""
   googlescholar         = ""
   #orcid                 = ""
-  researchgate          = "https://www.researchgate.net/scientific-contributions/Richmond-S-Newman-2036863496"
+  #researchgate          = "Richmond-S-Newman-2036863496"
   #keybase               = "example"
   #mastodon              = "example.com/@example"
   # Email
