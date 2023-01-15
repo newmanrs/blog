@@ -4,7 +4,7 @@ build:
 	@echo 'Build hugo site'
 	@hugo
 
-drafts:
+local:
 	echo 'local server, with draft posts'
 	@hugo server -D
 
