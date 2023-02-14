@@ -15,10 +15,10 @@
   pageRef = "post"
   weight = 10
 
-#[[main]]
-#  name = "Resume"
-#  pageRef = "static/resume.html"
-#  weight = 20
+[[main]]
+  name = "Resume"
+  url = "resume/"
+  weight = 20
 
 #[[main]]
 #  name = "example sub-menu 1"
@@ -46,7 +46,22 @@
 [[main]]
   name = "Tags"   # TODO:  Move categories in posts to tags
   pageRef = "categories"
-  weight = 20
+  weight = 25
+
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/newmanrs"
+  weight = 80
+
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  url = "https://linkedin.com/in/newmanrs"
+  weight = 81
+
+
 
 #[[main]]
 #  name = "Tags"

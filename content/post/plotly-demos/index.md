@@ -3,13 +3,6 @@ title = "Blog now featuring interactive plots"
 date = 2021-12-06
 draft = false
 categories = ["plotly", "ODE", "nonlinear dynamics"]
-removeBlur = false
-plotly = true
-
-[[images]]
- src = "/blog/plotly-demos/featured.png"
- alt = "van der Pol oscillator with different trajectories"
- stretch = true
 +++
 
 Testing out integrating plotly.js charts into the blog by going straight making animations of systems of differential equation to test their performance.
@@ -17,12 +10,12 @@ The article image is, of course, not actually interactive, and the article read 
 
 <!--more-->
 
-### Plots
+## Plots
 
 Suppose now that I've edited this site to support [plotly](https://plotly.com/javascript/), I should produce some content with them and have chosen to go with some applied math classics.
 Plotly is pretty easy to use, but the documentation and examples for making figures via their python library are poor.
 
-### Lotka-Volterra ODE system
+## Lotka-Volterra ODE system
 
 The [Lotka-Volterra model](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) is one of the simplest predator-prey dynamics models demonstrating stable limit cycles, meaning the system enters a fixed oscillatory pattern.
 It consists of a population of prey $x(t)$ that grows exponentially with growth rate $\alpha$, a predator population $y(t)$ that starves exponentially with death rate $\gamma$, and interaction terms of predation causing the growth of the predators and deaths of the prey proportional to the product of their populations (more hungry predators eat more available prey).  This system is defined as:
