@@ -6,10 +6,6 @@ categories = ["pagebundle"]
 removeBlur = false
 plotly = true
 
-[[images]]
- src = "/blog/voronoi-image-compression/featured.png"
- alt = "Cloudburst beers containing Azacca"
- stretch = true
 +++
 
 Goofing around with voronoi tesselations of images inspired by this [code golf question](https://codegolf.stackexchange.com/questions/50299/draw-an-image-as-a-voronoi-map) I bookmarked years ago.
@@ -28,4 +24,4 @@ $$ C_i = { x \in R^2 | d(x,p_i) < d(x,p_k) \forall i \neq j} $$
 Attempt to make a plot
 
 
-        {{< plotly json="/blog/voronoi-image-compression/scatterplot.json" height="200px" >}}
+        {{< plotly json="/blog/voronoi/scatter.json" height="200px" >}}

@@ -5,16 +5,15 @@ draft = true
 categories = ["chatgpt", "artificial intelligence", "machine learning"]
 removeBlur = false
 plotly = true
-
-[[images]]
- src = "/blog/chatgpt-bad-code/featured.png"
- alt = "chat gpt code snippet"
- stretch = true
 +++
+
+{{< katex >}}
 
 Last November OpenAI introduced a chatbot called ChatGPT built ontop of their GPT-3 language models.  Since this release it has gotten significant news coverage talking about its ability to help write essays, or even help program.  In this post we will take it for a test drive (a test conversation I suppose), with a few examples from code generation, to recipes, to discussing science.  These examples will focus mostly on single prompts to generate text, rather than using ChatGPT as a conversation engine.
 
 <!--more-->
+
+{{< katex >}}
 
 TODO:
 Continue introductory text, maybe stackoverflow banning it, and some other links and discussion.
