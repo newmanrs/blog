@@ -1,0 +1,9 @@
+Wrong with modern innovation:
+https://www.youtube.com/watch?v=Ze8jifMh034
+Microcontroller/heater plastic hook that uses hotglue to attach/detach.
+https://arstechnica.com/gadgets/2023/01/us-school-runs-lights-24-7-365-the-smart-lights-have-been-broken-since-2021/School lights are permanently stuck on after software breaks.  Also should lights be fail-on or fail-off?  No manual controls?
+https://www.thedrive.com/car-reviews/2022-lucid-air-review-price-options-specs-impressions-new-cars-evs
+Power cycle a car
+Toilet with no physical button, solar-autoflush mechanism only, in a windowless apt building bathroom with timer lights only.
+
+Therac design, interlocks, design for failure.

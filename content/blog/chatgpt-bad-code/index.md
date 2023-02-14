@@ -232,3 +232,7 @@ ChatGPT in my testing is remarkably proficient in generating jargon pages.  Here
 ### Discussion and Closing Remarks
 
 I suppose we should note that that ChatGPT was trained on a large scrape of the modern web (including wikipedia), archives of books, 
+
+Lack of voice in using it for writing.
+
+https://www.bbc.com/news/world-us-canada-64548324
