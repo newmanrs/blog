@@ -9,5 +9,5 @@ Friend of mine recently asked me for a copy of my old doctoral defense slides an
 
 <!--more-->
 
-Those who want more detail can also access my [dissertation](https://deepblue.lib.umich.edu/handle/2027.42/168144) from the University of Michigan library.  And feel free to contact me if you need to find copies of my research papers, although most of them are likely available from [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub).
+Those who want more detail can also access my [dissertation](https://deepblue.lib.umich.edu/handle/2027.42/133471) from the University of Michigan library.  And feel free to contact me if you need to find copies of my research papers, although most of them are likely available from [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub).
 
